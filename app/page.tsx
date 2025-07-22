@@ -39,25 +39,27 @@ export default function HomePage() {
             </ScrollReveal>
 
             <ScrollReveal delay={800}>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Button variant="primary" size="xl" className="group">
-                  <span className="flex items-center gap-2">
-                    Umów wizytę teraz
-                    <svg
-                      className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </span>
-                </Button>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center sm:items-end">
+                <Link href={"#contact"}>
+                  <Button variant="primary" size="xl" className="group">
+                    <span className="flex items-center gap-2">
+                      Umów wizytę teraz
+                      <svg
+                        className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </Button>
+                </Link>
                 <Link href={"/projects"}>
-                  <Button variant="outline" size="xl" className="group bg-transparent">
+                  <Button variant="outline" size="md" className="group bg-transparent">
                     <span className="flex items-center gap-2">
                       Zobacz nasze prace
                       <svg
@@ -234,7 +236,7 @@ export default function HomePage() {
                     sportowych. Używamy tylko oryginalnych części i najnowocześniejszego sprzętu diagnostycznego.
                   </p>
 
-                  <div className="grid sm:grid-cols-2 gap-6 mb-10">
+                  <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-10">
                     {[
                       { number: "15", label: "Lat doświadczenia", icon: "🏆" },
                       { number: "2000", label: "Naprawionych motocykli", icon: "🔧" },
